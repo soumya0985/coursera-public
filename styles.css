@@ -1,0 +1,241 @@
+/* ===== RESET & BASE STYLES ===== */
+/* Remove default margins and padding, use border-box for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set default font, line height, text color, and background */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* ===== HEADER ===== */
+/* Main page header with dark background and centered text */
+.header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Hamburger menu button for mobile navigation */
+.hamburger {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background: #2c3e50;
+    border: none;
+    cursor: pointer;
+}
+
+/* ===== NAVIGATION ===== */
+/* Sticky navigation bar that remains at top when scrolling */
+.navbar {
+    background-color: #34495e;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* Horizontal flexbox layout for navigation links with wrapping */
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* Navigation link styling with hover/focus states for accessibility */
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    background-color: #2c3e50;
+    outline: 2px solid #3498db;
+}
+
+/* ===== MAIN CONTENT ===== */
+/* Centered container with max-width for optimal readability */
+.main-content {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* ===== SECTION STYLES ===== */
+/* Consistent white card styling for all major sections */
+.about-section,
+.projects-section,
+.skills-section,
+.contact-section {
+    background: white;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Section headings with blue underline accent */
+h2 {
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 0.5rem;
+}
+
+/* ===== PROJECTS SECTION ===== */
+/* Flex column layout for stacking project cards vertically */
+.projects-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 2rem;
+}
+
+/* Filter button with hover state for project filtering */
+.filter-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.filter-btn:hover,
+.filter-btn:focus {
+    background-color: #2980b9;
+    outline: 2px solid #2c3e50;
+}
+
+/* Individual project cards with left border accent and hover animation */
+.project-card {
+    background: #ecf0f1;
+    padding: 1.5rem;
+    border-radius: 6px;
+    border-left: 4px solid #3498db;
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+/* ===== SKILLS SECTION ===== */
+/* Flexbox layout for skill tags with wrapping and gap spacing */
+.skills-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* Pill-shaped skill items with star icon decoration */
+.skill-item {
+    background-color: #3498db;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Star icon preceding each skill item */
+.skill-item::before {
+    content: "★";
+    font-size: 1.2rem;
+}
+
+/* ===== CONTACT FORM ===== */
+/* Vertical flexbox layout for form fields and spacing */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Form label styling */
+.contact-form label {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+/* Input and textarea styling with focus states for accessibility */
+.contact-form input,
+.contact-form textarea {
+    padding: 0.75rem;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: 2px solid #3498db;
+    border-color: #3498db;
+}
+
+/* Submit button with hover and focus states */
+.submit-btn {
+    padding: 0.75rem 1.5rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover,
+.submit-btn:focus {
+    background-color: #2980b9;
+    outline: 2px solid #2c3e50;
+}
+
+/* ===== FOOTER ===== */
+/* Dark footer section with centered text and top margin */
+.footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+/* Mobile optimizations for screens 768px and below */
+@media (max-width: 768px) {
+    /* Stack navigation vertically on mobile devices */
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Reduce main content margin on smaller screens */
+    .main-content {
+        margin: 1rem auto;
+    }
+
+    /* Reduce heading size on mobile */
+    h2 {
+        font-size: 1.5rem;
+    }
+}
